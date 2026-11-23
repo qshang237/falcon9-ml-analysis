@@ -1,19 +1,19 @@
 # SpaceX Falcon 9 First Stage Landing Prediction
 
-An end-to-end data science project predicting whether SpaceX Falcon 9's first stage will successfully land, enabling cost estimation for rocket launches.
+A data science project predicting whether SpaceX Falcon 9's first stage will successfully land, enabling cost estimation for rocket launches.
 
 ## Project Overview
 
-SpaceX advertises Falcon 9 launches at $62M — significantly cheaper than competitors — largely due to first stage reusability. This project builds a machine learning pipeline to predict landing success, using real launch data collected via the SpaceX API and web scraping.
+SpaceX advertises Falcon 9 launches at $62M, significantly cheaper than competitors, largely due to first stage reusability. This project collects real launch data from the SpaceX API, analyses the launch records with SQL, shows them in an interactive dashboard, and trains classification models to predict landing success.
 
-## Pipeline
+## Contents
 
-1. **Data Collection** — SpaceX REST API + web scraping
-2. **Data Wrangling** — cleaning, feature engineering, label encoding
-3. **Exploratory Data Analysis** — SQL queries + visual analysis
-4. **Geospatial Analysis** — launch site mapping with Folium
-5. **Interactive Dashboard** — built with Plotly Dash
-6. **ML Prediction** — classification models with GridSearchCV tuning
+1. **Data Collection**: SpaceX REST API, with basic data wrangling (`notebooks/01_data_collection_api.ipynb`)
+2. **Exploratory Data Analysis**: SQL queries (`notebooks/02_eda_sql.ipynb`)
+3. **Interactive Dashboard**: built with Plotly Dash (`app/spacex_dash_app.py`)
+4. **ML Prediction**: classification models with GridSearchCV tuning (`notebooks/03_ml_prediction.ipynb`)
+
+The SQL analysis and the prediction notebook load the prepared datasets of the course from the course server. The dashboard reads `spacex_launch_dash.csv`, the prepared course dataset, which is not included in this repository.
 
 ## Results
 
@@ -28,8 +28,8 @@ Best model: **Logistic Regression** (C=0.01, L2 regularisation)
 
 ## Tech Stack
 
-Python, Pandas, NumPy, Scikit-learn, SQL, Plotly Dash, Folium, BeautifulSoup, Requests
+Python, Pandas, NumPy, Scikit-learn, SQL, Plotly Dash, Requests
 
 ## Certificate
 
-IBM Data Science Professional Certificate — [Coursera](https://www.coursera.org/professional-certificates/ibm-data-science)
+IBM Data Science Professional Certificate ([Coursera](https://www.coursera.org/professional-certificates/ibm-data-science))
